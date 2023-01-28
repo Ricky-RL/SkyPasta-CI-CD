@@ -6,6 +6,7 @@ list:
 build-cpp:
 	mkdir -p build/
 	cd build/; cmake ../src/; $(MAKE)
+	
 
 ## Test ##
 test-cpp: build-cpp
