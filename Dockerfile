@@ -8,6 +8,7 @@ FROM ubuntu:16.04 AS cmakedep
 RUN mkdir -p /cmakebuild
 WORKDIR /cmakebuild
 
+
 RUN apt-get update -y && apt-get install -y build-essential wget libssl-dev
 
 ARG CMAKE_VERSION=3.18.2
