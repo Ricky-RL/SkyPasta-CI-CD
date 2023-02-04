@@ -23,7 +23,15 @@ endif()
 
 # Libexiv2 dependency
 # Version 0.27.1 has an ARM compilation issue. The issue is fixed on a branch but a new version hasn't been released...
-
+include(FetchContent)
+FetchContent_Declare( exiv2cmake URL https://www.exiv2.org/releases/exiv2-0.27.0-Source.tar.gz ) 
+FetchContent_GetProperties( exiv2cmake )
+if ( NOT exiv2cmake_POPULATED )
+  FetchContent_Populate( exiv2cmake )
+endif()
+option( EXIV2_BUILD_SAMPLES "" OFF )
+option( EXIV2_BUILD_EXIV2_COMMAND "" OFF )
+add_subdirectory( ${exiv2cmake_SOURCE_DIR} ${exiv2cmake_BINARY_DIR} )
 
 # Spinnaker dependency
 find_library( SPINNAKER_LIB "Spinnaker" HINTS "/opt/spinnaker/lib" "/usr/lib" )
