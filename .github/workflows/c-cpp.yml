@@ -28,7 +28,7 @@ jobs:
     - name: Install spinnmaker
       run: wget https://meta.box.lenovo.com/v/link/view/a1995795ffba47dbbe45771477319cc3
       
-#     - name: building
-#       run: |
-#         mkdir build && cd build
-#         cmake ..
+    - name: building
+      run: |
+        mkdir build && cd build
+        cmake ..
