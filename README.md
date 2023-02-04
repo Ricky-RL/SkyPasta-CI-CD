@@ -12,6 +12,7 @@
                 [Golden Retriever]
 ```
 
+
 ## Dependencies
 
 SkyPasta must be run in a Linux environment (Ubuntu 20.04).
