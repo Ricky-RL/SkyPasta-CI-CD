@@ -11,7 +11,6 @@ if(NOT CMAKE_BUILD_TYPE)
 endif()
 
 
-
 # Find clang-tidy executable
 find_program( CLANG_TIDY_EXE NAMES "clang-tidy" )
 if( NOT CLANG_TIDY_EXE )
