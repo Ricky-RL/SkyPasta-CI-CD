@@ -5,7 +5,6 @@ project( skypasta )
 # Libuuas options
 option( UUAS_ENABLE_CLANG_TIDY "" ON )
 
-
 # Set compile flags
 if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Release)
